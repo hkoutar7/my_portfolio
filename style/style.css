@@ -1,0 +1,266 @@
+/* Start Header  */
+header {
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+nav > div:first-of-type {
+  flex-basis: 15%;
+  text-align: center;
+  font-size: 39px;
+  font-weight: 700;
+  margin: 14px 0;
+}
+
+nav > div:first-of-type::first-letter {
+  color: var(--lighter-red);
+  font-size: 40px;
+}
+
+nav > ul {
+  display: inline-flex;
+  flex-basis: 41%;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+}
+
+nav > ul > li > a {
+  color: #e0e0e0;
+}
+
+nav > ul > li {
+  position: relative;
+  width: 14%;
+  text-align: left;
+}
+
+nav > ul > li::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  background-color: var(--bloody-red);
+  height: 3px;
+  left: 0;
+  bottom: -7px;
+  transition: all linear var(--transition-duration);
+}
+
+nav > ul > li:hover::after {
+  width: 100%;
+}
+.main-content {
+  background-image: url(../images/background.png);
+  background-position: center center;
+  background-size: cover;
+  height: calc(100vh - 88.28px);
+  position: absolute;
+  width: 100%;
+}
+
+.main-content > div {
+  height: calc(100vh - (88.28px * 2));
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.main-content > div h2 {
+  color: #b8b8b7;
+  font-size: 25px;
+}
+.main-content > div p {
+  font-weight: 700;
+  font-size: 41px;
+  letter-spacing: 1px;
+}
+.main-content > div p span {
+  color: var(--lighter-red);
+}
+
+.burger-icon,
+.open-icon {
+  display: none;
+}
+
+@media only screen and (max-width: 767px) {
+  .open-icon {
+    display: block;
+  }
+  .burger-icon {
+    order: -1;
+    margin: 20px 0 0;
+  }
+  nav > div:first-of-type {
+    font-size: 21px;
+  }
+  nav > div:first-of-type::first-letter {
+    font-size: larger;
+  }
+  nav {
+    position: relative;
+  }
+
+  .main-content {
+    background-image: url(../images/phone-background.png);
+    height: calc(100vh - 47.8px);
+  }
+  .main-content > div h2 {
+    font-size: 14px;
+  }
+  .main-content > div p {
+    font-weight: 700;
+    font-size: 25px;
+  }
+  .main-content > div {
+    gap: 9px;
+    justify-content: flex-end;
+  }
+
+  nav > ul {
+    flex-direction: column;
+    background-color: var(--lighter-red);
+    z-index: 6;
+    height: 103vh;
+    position: fixed;
+    width: 0%;
+    right: 0;
+    row-gap: 20px;
+    top: 0px;
+    justify-content: flex-start;
+    transition: width linear var(--transition-duration);
+  }
+
+  nav > ul > li {
+    width: fit-content;
+    display: none;
+  }
+  .open-icon,
+  .burger-icon {
+    font-size: 21px;
+  }
+}
+
+/* End Header  */
+/* Start About me  */
+
+section {
+  margin-top: 100vh;
+}
+section > div:first-of-type {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+  min-height: 560px;
+}
+section > div:first-of-type > div:first-of-type {
+  flex-basis: 25%;
+}
+section > div:first-of-type > div:last-of-type {
+  flex-basis: 65%;
+}
+section picture {
+  overflow: hidden;
+  display: block;
+  background-color: red;
+  border-radius: 11px;
+}
+section picture img {
+  width: 351px;
+}
+
+section > div article {
+  padding: 21px 1px 10px;
+}
+section > div article h1 {
+  font-weight: 700;
+  text-transform: capitalize;
+  font-size: 55px;
+}
+section > div article p {
+  color: var(--gray-medium);
+}
+section .myNav {
+  margin: 10px 0 20px;
+  cursor: pointer;
+}
+section .myNav ul {
+  gap: 40px;
+  color: var(--gray-medium);
+  text-transform: capitalize;
+  font-weight: 600;
+  display: inline-flex;
+  flex-basis: 41%;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+section .myNav ul {
+  position: relative;
+}
+div.art {
+  padding: 19px 0 0 17px;
+  display: none;
+}
+div.art p {
+  text-transform: capitalize;
+  font-size: 15px;
+  color: var(--gray-medium);
+}
+div.art h3 {
+  text-transform: capitalize;
+  font-size: 17px;
+  margin-bottom: 4px;
+  color: var(--bloody-red);
+  font-weight: 700;
+}
+
+div.art.active {
+  display: block;
+}
+.myNav li {
+  position: relative;
+}
+
+.myNav li::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  background-color: var(--bloody-red);
+  height: 3px;
+  left: 0;
+  bottom: -7px;
+  transition: all linear var(--transition-duration);
+}
+
+.myNav li.active::after {
+  width: 100%;
+}
+
+@media only screen and (max-width: 767px) {
+  section > div:first-of-type {
+    flex-direction: column;
+    row-gap: 18px;
+  }
+  section > div article h1 {
+    text-align: center;
+    font-size: 39px;
+  }
+  section > div article p {
+    font-size: 14px;
+  }
+}
+
+/* End  About me  */
