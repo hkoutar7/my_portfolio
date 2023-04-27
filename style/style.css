@@ -171,13 +171,13 @@ section > div:first-of-type > div:first-of-type {
 section > div:first-of-type > div:last-of-type {
   flex-basis: 65%;
 }
-section picture {
+section picture.pict1 {
   overflow: hidden;
   display: block;
   background-color: red;
   border-radius: 11px;
 }
-section picture img {
+section picture.pict1 img {
   width: 351px;
 }
 
@@ -264,3 +264,184 @@ div.art.active {
 }
 
 /* End  About me  */
+/* Start Our Serices  */
+
+#services {
+  margin: 80px 0;
+}
+#services > div {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+#services > div > div {
+  text-align: center;
+  color: #c5c5c5 !important;
+  transition: transform linear var(--transition-duration-l);
+}
+
+#services > div > div i {
+  font-size: 54px;
+}
+#services > div > div h4 {
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+#services > div > div p {
+  text-align: left;
+  padding: 8px 0 14px 9px;
+  color: var(--gray-medium);
+}
+#services > div > div p + span {
+  font-size: 15px;
+  color: var(--gray-medium);
+  text-transform: lowercase;
+}
+
+#services > div > div.card:hover {
+  transform: translateY(-20px);
+}
+#services > div > div.card:hover {
+  color: white !important;
+}
+
+#services > div > div.card:hover p,
+div > div.card:hover p + span {
+  color: #cdcdcd !important;
+}
+
+#services > div:first-of-type p {
+  font-size: 56px;
+  font-weight: 600;
+}
+#services > div.de {
+  display: block;
+}
+
+@media only screen and (max-width: 767px) {
+  #services > div > div.card:hover {
+    transform: none;
+  }
+}
+
+/* End Our Serices  */
+/* start my Work  */
+
+#myWork {
+  margin: 80px 0;
+  position: relative;
+}
+
+#myWork > div:first-of-type {
+  margin-bottom: 25px;
+}
+#myWork > div:first-of-type p {
+  font-size: 56px;
+  font-weight: 600;
+}
+#myWork > div:nth-of-type(2) {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+#myWork > div:nth-of-type(2) picture {
+  border-radius: 18px;
+  overflow: hidden;
+  filter: blur(1px);
+  transition: var(--transition-duration-l);
+  position: relative;
+}
+
+#myWork > div:nth-of-type(2) picture::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: linear-gradient(0, #000000, #731010ed, transparent);
+  transition: all ease var(--transition-duration);
+}
+
+#myWork > div:nth-of-type(2) picture:hover {
+  transform: scale(1.07);
+  filter: none;
+}
+
+#myWork > div:nth-of-type(2) picture:hover::after {
+  height: 100%;
+}
+#myWork > div:nth-of-type(2) picture img {
+  width: 325px;
+}
+#myWork button {
+  margin: 21px auto 0;
+  display: block;
+  padding: 9px 27px;
+  font-size: 22px;
+  font-weight: unset;
+  border-radius: 14px;
+  color: #fff;
+  background: transparent;
+  border: 1px solid var(--bloody-red);
+  transition: all ease var(--transition-duration);
+  position: relative;
+  overflow: hidden;
+}
+
+#myWork button::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  background-color: var(--bloody-red);
+  height: 100%;
+  transition: all ease var(--transition-duration-l);
+  z-index: -1;
+}
+
+#myWork button:hover {
+  border-color: white;
+  transform: scale(1.07);
+}
+
+#myWork button:hover::after {
+  width: 100%;
+}
+
+#myWork article {
+  flex-basis: 325px;
+  padding-left: 22px;
+  padding-right: 8px;
+}
+.article-con {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  visibility: hidden;
+}
+
+#myWork article.active {
+  transform: translateY(-195px);
+  visibility: visible;
+}
+@media only screen and (max-width: 767px) {
+  #myWork > div:nth-of-type(2) {
+    row-gap: 23px;
+    flex-direction: row;
+  }
+  #myWork button {
+    margin-top: 50px;
+  }
+}
+/* End my Work  */

@@ -51,6 +51,13 @@ a:hover {
   color: #fff;
 }
 
+.card-header {
+  border-bottom: none;
+}
+/* Start Animation : */
 
 
-/* End Global Rules */
+
+
+
+/* End Animation : */
