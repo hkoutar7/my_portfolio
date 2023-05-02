@@ -54,10 +54,10 @@ a:hover {
 .card-header {
   border-bottom: none;
 }
+textarea {
+  resize: none;
+}
+
 /* Start Animation : */
-
-
-
-
 
 /* End Animation : */

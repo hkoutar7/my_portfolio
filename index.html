@@ -19,15 +19,15 @@
   </head>
   <body>
     <!-- Start header  -->
-    <header class="container">
+    <header class="container" id="home">
       <nav>
         <div>Kevin.</div>
         <ul class="list-unstyled">
-          <li class="list-inline"><a href="#">Home</a></li>
-          <li class="list-inline"><a href="#">About</a></li>
-          <li class="list-inline"><a href="#">Services</a></li>
-          <li class="list-inline"><a href="#">Portfolio</a></li>
-          <li class="list-inline"><a href="#">Contact</a></li>
+          <li class="list-inline"><a href="#home">Home</a></li>
+          <li class="list-inline"><a href="#about">About</a></li>
+          <li class="list-inline"><a href="#services">Services</a></li>
+          <li class="list-inline"><a href="#myWork">Portfolio</a></li>
+          <li class="list-inline"><a href="#contact">Contact</a></li>
           <li class="burger-icon" onclick="closeMenu()">
             <i class="bi bi-x"></i>
           </li>
@@ -49,7 +49,7 @@
     <!-- End header  -->
     <section class="container">
       <!-- Start About Me  -->
-      <div>
+      <div id="about">
         <div>
           <picture class="pict1">
             <img src="./images/user.png" alt="image not found " />
@@ -186,10 +186,61 @@
 
       <!-- End Ny service Section  -->
     </section>
-    <footer></footer>
+    <footer id="contact" class="container">
+      <div class="cont">
+        <div>
+          <h1>Contact me</h1>
+          <p>
+            <i class="bi bi-envelope-at"></i><span>contact@example.com</span>
+          </p>
+          <p><i class="bi bi-telephone"></i><span>0678451009</span></p>
+          <ul>
+            <li><i class="bi bi-facebook"></i></li>
+            <li><i class="bi bi-twitter"></i></li>
+            <li><i class="bi bi-instagram"></i></li>
+            <li><i class="bi bi-linkedin"></i></li>
+          </ul>
+          <a href="./images/my-cv.pdf" download class="btn btn-primary"
+            >Download CV</a
+          >
+        </div>
+
+        <div class="form-group row">
+          <form name="submit-to-google-sheet">
+            <input
+              type="text"
+              name="Name"
+              placeholder="Your Name"
+              id="i1"
+              required
+            />
+            <input
+              type="text"
+              name="Email"
+              placeholder="Your Email"
+              id="i2"
+              required
+            />
+            <textarea
+              name="Message"
+              placeholder="Your Message"
+              id="i3"
+              rows="6"
+              required
+            ></textarea>
+            <input type="submit" class="btn btn-primary" value="Submit" />
+          </form>
+        </div>
+      </div>
+    </footer>
+    <div class="footer">
+      copyright &copy; Kevin, made with <i class="bi bi-heart-fill"></i> by
+      Hamza Koujo
+    </div>
     <!-- my main js script  -->
     <script src="./js_file/main.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js_file/formSubmit.js"></script>
   </body>
 </html>

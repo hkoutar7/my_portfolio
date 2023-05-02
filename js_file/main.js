@@ -66,43 +66,4 @@ function openNav(choice) {
   }
 }
 
-// Card Events :
-let myContCards = Array.from(document.querySelectorAll("#myWork div picture"));
-let myArticles = Array.from(document.querySelectorAll(".article-con article"));
 
-function removeActive(myArr) {
-  myArr.forEach(function (e) {
-    if (e.classList.contains("active")) e.classList.remove("active");
-  });
-}
-
-myContCards.forEach(function (card) {
-  card.addEventListener("click", function (e) {
-    removeActive(myArticles);
-
-    if (e.target.classList.contains("p1")) {
-      let article1 = document.querySelector(
-        ".article-con > article:first-of-type"
-      );
-      if (article1) {
-        article1.classList.add("active");
-      }
-    }
-    if (e.target.classList.contains("p2")) {
-      let article2 = document.querySelector(
-        ".article-con > article:nth-of-type(2)"
-      );
-      if (article2) {
-        article2.classList.add("active");
-      }
-    }
-    if (e.target.classList.contains("p3")) {
-      let article3 = document.querySelector(
-        ".article-con > article:nth-of-type(3)"
-      );
-      if (article3) {
-        article3.classList.add("active");
-      }
-    }
-  });
-});
